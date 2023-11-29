@@ -84,6 +84,7 @@ svg {
     height: 500px;
     width: 700px;
     margin: 20px;
+    min-width: 550px;
 }
 
 .container .content .hero-text {
@@ -130,6 +131,10 @@ button  {
 button:hover {
     background: var(--clr-primary-soft-magenta);
     transition: ease-in 0.1s;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: -0.2rem;
+    font-weight: 600;
 }
 
 
@@ -159,3 +164,126 @@ button:hover {
     fill:  hsl(300, 69%, 71%);
     border: 1px solid hsl(300, 69%, 71%);
 }
+
+@media only screen and (max-width: 920px) {
+    
+    body {
+        overflow: scroll;
+    }
+
+    body::before {
+        background-image: url(./images/bg-mobile.svg);
+        background-size: cover;
+
+    }
+
+    header .logo {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        height: 100px;
+        padding-left: 40px;
+    }
+
+    @keyframes changewidth {
+        from {
+        width: 200px;
+        }
+    
+        to {
+        width: 250px;
+        }
+    }
+    
+    .logo {
+        transition: ease-in;
+        animation-duration: 0.4s;
+        animation-name: changewidth;
+        animation-iteration-count: 3;
+        animation-direction: alternate-reverse;
+    }
+
+ 
+
+    .container .content {
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(2, 1fr);
+        position: relative;
+     
+
+    }
+    
+    .content .hero-img {   
+        margin: 0;
+        padding: 0;
+        height: 350px;
+        width: 120px;
+        min-width: 350px;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 200px;
+     }
+
+
+    .hero-text > .title {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 350px;
+    }
+
+    ul {
+        margin-top: 0;
+    }
+
+    .description {
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        position: absolute;
+        right: 12%;
+        left: 12%;
+        top: 400px;
+    }
+
+    .register {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 600px;
+    }
+    
+    .contact {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 30px);
+        grid-template-rows: 30px;
+        gap: 10px;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 900px;
+
+        
+    }
+
+
+};
